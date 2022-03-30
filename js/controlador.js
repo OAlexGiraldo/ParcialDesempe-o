@@ -24,5 +24,6 @@ let carrito=[]
 
 let btnagregar=document.getElementById("añadir")
 btnagregar.addEventListener("click",function(){
-
+    carrito.push(producto)
+    console.log(carrito)
 })
