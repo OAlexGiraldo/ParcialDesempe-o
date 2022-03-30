@@ -6,7 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-    <link rel="stylesheet" href="css/estilo.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="estilo.css">
 </head>
 <body>
     <header>
@@ -27,15 +28,13 @@
                   <li class="nav-item">
                     <a class="nav-link" href="#">Marvel</a>
                   </li>
-                  <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                      Otras
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">
+                      <i class="bi bi-cart4"></i>
+                      <span class="position-absolute top-10 start-10 translate-middle badge rounded-pill bg-danger invisible">
+                        99+
+                      </span>
                     </a>
-                    <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                      <li><a class="dropdown-item" href="#">Iniciar Session</a></li>
-                      <li><a class="dropdown-item" href="#">Registrarse</a></li>
-                      <li><a class="dropdown-item" href="Tienda.html">Tienda</a></li>
-                    </ul>
                   </li>
                 </ul>
               </div>
@@ -44,7 +43,7 @@
     </header>
 
     <main class="text-center">
-        <H4>Productos</H4>
+        <h4 id="titlu" class="color-">Productos</h4>
     </main>
     <main>
         <div class="container">
@@ -54,9 +53,45 @@
 
         </div>
     </main>
+    
+    <section>
+      <div class="modal fade" id="modalinfo" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">DcMarvel</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <div class="container">
+                <div class="row">
+                  <div class="col-4">
+                    <img src="" alt="" class="w-100 img-fluid" id="fotoinfo">
+
+                  </div>
+                  <div class="col-8">
+                    <h4 class="text-center" id="tituloinfo"> </h4>
+                    <h2 class="text-center" id="precioinfo"></h2>
+                    <P class="text-center" id="descripcion"></P>
+                    <div class="mb-3">
+                      <label  class="form-label">Cantida:</label>
+                      <input type="number" class="form-control" id="cantidaProducto">
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+              <button id="añadir" type="button" class="btn btn-primary">Agregar al Carrito</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
 
-<footer class="bd-footer py-5 mt-5 bg-light">
+<footer class="bd-footer py-5 mt-5 bg-secondary">
 
     <div class="container py-5">
         <div class="row">
@@ -104,6 +139,7 @@
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 
-    <script src="js/Tiendallenado.js"></script>
+    <script src="js/controlador.js" type="module"></script>
+    
 </body>
 </html>

@@ -1,11 +1,12 @@
-let productosT=
+export function llenarTienda() {
+    let productosT=
 [
 
     {foto:'img/foto1.png',nombre:"Figura Cap Ameracia",precio:350000,descripcion:"Figura De Accion De Marvel Avengers 6 Pulgadas Surtidas coleciconables"},
     {foto:'img/foto2.png',nombre:"Figura Iroman",precio:390000,descripcion:"Figura De Accion De Marvel Avengers 6 Pulgadas Surtidas coleciconables"},
     {foto:'img/foto3.png',nombre:"Figura Black Widow",precio:400000,descripcion:"Figura De Accion De Marvel Avengers 6 Pulgadas Surtidas coleciconables"},
-    {foto:'img/foto4.png',nombre:"Figura Hawkey",precio:350000,descripcion:"Figura De Accion De Marvel Avengers 6 Pulgadas Surtidas coleciconables"},
-    {foto:'img/foto5.png',nombre:"Figura Thor",precio:350000,descripcion:"Figura De Accion De Marvel Avengers 6 Pulgadas Surtidas coleciconables"},
+    {foto:'img/foto4.png',nombre:"Figura Thor",precio:350000,descripcion:"Figura De Accion De Marvel Avengers 6 Pulgadas Surtidas coleciconables"},
+    {foto:'img/foto5.png',nombre:"Figura Hawkey",precio:350000,descripcion:"Figura De Accion De Marvel Avengers 6 Pulgadas Surtidas coleciconables"},
     {foto:'img/foto6.png',nombre:"Figura Hulk",precio:350000,descripcion:"Figura De Accion De Marvel Avengers 6 Pulgadas Surtidas coleciconables"},
     {foto:'img/foto7.png',nombre:"Figura Fury",precio:300000,descripcion:"Figura De Accion De Marvel Avengers 6 Pulgadas Surtidas coleciconables"},
     {foto:'img/foto8.png',nombre:"Figura Loki",precio:290000,descripcion:"Figura De Accion De Marvel Avengers 6 Pulgadas Surtidas coleciconables"},
@@ -17,7 +18,7 @@ let productosT=
 
 let filia=document.getElementById("fila")
 productosT.forEach(function(producto){
-    console.log(producto)
+   // console.log(producto)
 
     //2.pintando etiquetas
 
@@ -29,12 +30,14 @@ productosT.forEach(function(producto){
     let tarjeta=document.createElement("div")
     tarjeta.classList.add("card")
     tarjeta.classList.add("h-100")
+    tarjeta.classList.add("bg-dark","text-white")
 
     //creando img con clase card-img-top
 
     let foto=document.createElement("img")
     foto.classList.add("card-img-top")
     foto.src=producto.foto
+    
 
     let titulo=document.createElement("h4")
     titulo.classList.add("text-center")
@@ -64,3 +67,5 @@ productosT.forEach(function(producto){
     columna.appendChild(tarjeta)
     filia.appendChild(columna)
 })
+    
+}
